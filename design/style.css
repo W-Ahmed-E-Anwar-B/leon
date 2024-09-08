@@ -150,7 +150,6 @@ header .links ul li:not(:last-child) a {
   text-align: center;
   line-height: 1.8;
   background-color: #f6f6f6;
-  box-shadow: 1px 1px 7px #00000078;
   border-radius: 10px;
   transition: .5s;
 }
