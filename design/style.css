@@ -1,6 +1,8 @@
 /* start varibles */
 :root {
   --main-color: #10cab7;
+  --padding-top: 60px;
+  --padding-bottom: 60px;
 }
 /* end varibles */
 /* start golbal */
@@ -11,6 +13,7 @@
 }
 body {
   font-family: "Work Sans", sans-serif;
+  scroll-behavior: smooth;
 }
 .continer {
   margin-right: auto;
@@ -37,6 +40,31 @@ body {
   }
 }
 /* end golbal */
+/* start spacial heading */
+.sapcial-heading {
+  font-size: 100px;
+  font-weight: 800;
+  text-align: center;
+  margin: 0;
+  letter-spacing: -3px;
+  color: #ebeced;
+}
+.sapcial-heading + p {
+  font-size: 20px;
+  color: #797979;
+  text-align: center;
+  margin: -30px 0 0;
+}
+@media (max-width: 768px) {
+  .sapcial-heading {
+    font-size: 60px;
+  }
+  .sapcial-heading + p {
+    margin: -20px 0 0;
+    font-size: 20px;
+  }
+}
+/* End spacial heading */
 /* start header */
 header {
   padding: 20px;
@@ -150,7 +178,6 @@ header .links ul li:not(:last-child) a {
   text-align: center;
   line-height: 1.8;
   background-color: #f6f6f6;
-  border-radius: 10px;
   transition: .5s;
 }
 .feture .feet:hover {
@@ -165,3 +192,64 @@ header .links ul li:not(:last-child) a {
   color: #777;
 }
 /* end feture */
+/* start services */
+.services {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+}
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 100px 0 0;
+}
+.services .services-content .srv {
+  display: flex;
+}
+@media (max-width: 767px){
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .services-content .srv i{
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+.services .services-content .srv .text h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.services .services-content .srv .text {
+  flex: 1;
+}
+.services .services-content .srv .text p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.4;
+}
+.services .services-content .image {
+  text-align: center;
+  position: relative;
+}
+.services .services-content .image::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: calc(100% + 100px);
+  background-color: #607D8B;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  z-index: -1;
+}
+.services .services-content .image img {
+  width: 260px;
+}
+@media (max-width: 1199px) {
+  .services .services-content .image {
+    display: none;
+  }
+}
+/* end services */
