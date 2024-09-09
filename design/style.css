@@ -1,6 +1,7 @@
 /* start varibles */
 :root {
   --main-color: #10cab7;
+  --section-background: #f6f6f6;
   --padding-top: 60px;
   --padding-bottom: 60px;
 }
@@ -253,3 +254,34 @@ header .links ul li:not(:last-child) a {
   }
 }
 /* end services */
+/* start portfolio */
+.portfolio {
+  padding-top: var(--padding-top);
+  padding-bottom: var(--padding-bottom);
+  background-color: var(--section-background);
+}
+.portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 100px 0 0;
+}
+.portfolio .continer .portfolio-content .card {
+  background-color: white;
+}
+.portfolio .continer .portfolio-content .card img {
+  max-width: 100%;
+}
+.portfolio .continer .portfolio-content .card .info {
+  padding: 20px;
+}
+.portfolio .continer .portfolio-content .card .info h3 {
+  margin: 0;
+}
+.portfolio .continer .portfolio-content .card .info p {
+  font-size: 16px;
+  color: #777;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+/* end portfolio */
